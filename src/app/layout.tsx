@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import { motion } from "framer-motion";
+import Link from "next/link";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,7 +28,22 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className="flex flex-row items-center justify-between gap-9 p-8 pb-20">
+        <h1 className="text-2xl font-bold">FGB</h1>
+        <nav className="flex flex-row items-center justify-center gap-9">
+          <Link href="/" className="text-blue-500">Home</Link>
+          <Link href="/shop" className="text-blue-500">Shop</Link>
+          <Link href="/about-us" className="text-blue-500">About Us</Link>
+        </nav>
+        <div className="flex flex-row items-center justify-between gap-9">
+          <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">Click me</button>
+          <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">Click me</button>
+        </div>
+      </header>
         {children}
+        <footer className="flex flex-row items-center justify-center">
+          <p className="text-sm text-gray-500">Copyright © 2025 FGB</p>
+        </footer>
       </body>
     </html>
   );
