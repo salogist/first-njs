@@ -48,7 +48,7 @@ export default function Herosection() {
   const typedTitle = useTypedText("Use Mind!");
 
   return (
-    <main className="min-h-screen flex flex-row items-center justify-center text-white">
+    <section className="px-8 py-16 flex flex-row items-center justify-center text-white">
       <motion.div
         className="flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-6xl"
         initial="hidden"
@@ -59,17 +59,17 @@ export default function Herosection() {
 
         {/* بخش معرفی */}
         <motion.div className="space-y-6" variants={itemVariants}>
-          <h1 className="text-5xl font-extrabold text-blue-400">
+          <h1 className="text-5xl font-extrabold text-black">
             {typedTitle}
           </h1>
-          <p className="text-lg text-gray-300">
+          <p className="text-lg text-black">
             my new personal project with Next.JS
           </p>
           <motion.div className="flex gap-6">
             <Link href="/shop">
               <motion.span
                 whileHover={{ scale: 1.05 }}
-                className="text-blue-400 hover:text-blue-300 transition-colors"
+                className="text-black"
               >
                 🛍️ Shop
               </motion.span>
@@ -77,7 +77,7 @@ export default function Herosection() {
             <Link href="/about-us">
               <motion.span
                 whileHover={{ scale: 1.05 }}
-                className="text-blue-400 hover:text-blue-300 transition-colors"
+                className="text-black"
               >
                 ℹ️ About Us
               </motion.span>
@@ -87,7 +87,7 @@ export default function Herosection() {
 
         {/* فرم ثبت‌نام */}
         <motion.div
-          className="bg-gray-800 p-6 rounded-2xl shadow-2xl w-full max-w-sm"
+          className="bg-black p-6 rounded-2xl shadow-2xl w-full max-w-sm"
           variants={itemVariants}
         >
           <h2 className="text-2xl font-semibold text-center mb-4">Join Us</h2>
@@ -95,21 +95,21 @@ export default function Herosection() {
             <motion.input
               type="text"
               placeholder="Your Name"
-              className="bg-gray-700 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="bg-white text-black p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-700"
               whileFocus={{ scale: 1.02 }}
               variants={itemVariants}
             />
             <motion.input
               type="text"
               placeholder="Your Last Name"
-              className="bg-gray-700 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="bg-white text-black p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-700"
               whileFocus={{ scale: 1.02 }}
               variants={itemVariants}
             />
             <motion.button
               type="submit"
-              className="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 rounded-md transition-all"
-              whileHover={{ scale: 1.05 }}
+              className="bg-black hover:bg-white hover:text-black text-white font-semibold py-2 rounded-md transition-all"
+              whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.95 }}
               variants={itemVariants}
             >
@@ -118,6 +118,6 @@ export default function Herosection() {
           </form>
         </motion.div>
       </motion.div>
-    </main>
+    </section>
   );
 }
