@@ -34,7 +34,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="px-8 py-16 flex justify-center items-center min-h-screen ">
+    <section className=" bg-white flex justify-center items-center px-8 py-16 h-screen">
       <div className="flex flex-col md:flex-row gap-12 w-full max-w-5xl items-stretch">
         {/* Left: Info & Cards */}
         <motion.div

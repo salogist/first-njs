@@ -1,123 +1,37 @@
-"use client";
-import Link from "next/link";
+'use client'
+import React from 'react';
+import Link from 'next/link';
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { Metadata } from "next";
-
-const containerVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 70,
-      damping: 14,
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30, scale: 0.95 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { duration: 0.5 },
-  },
-};
-
-// انیمیشن تایپی ساده
-const useTypedText = (text: string, speed = 80) => {
-  const [displayed, setDisplayed] = useState("");
-  useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      setDisplayed(text.slice(0, i + 1));
-      i++;
-      if (i === text.length) clearInterval(interval);
-    }, speed);
-    return () => clearInterval(interval);
-  }, [text]);
-  return displayed;
-};
-
-
-export default function Herosection() {
-  const typedTitle = useTypedText("Use Mind!");
-
+const Hero = () => {
   return (
-    <section className="px-8 py-16 flex flex-row items-center justify-center text-white">
-      <motion.div
-        className="flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-6xl"
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-      >
-
-
-        {/* بخش معرفی */}
-        <motion.div className="space-y-6" variants={itemVariants}>
-          <h1 className="text-5xl font-extrabold text-black">
-            {typedTitle}
-          </h1>
-          <p className="text-lg text-black">
-            my new personal project with Next.JS
-          </p>
-          <motion.div className="flex gap-6">
-            <Link href="/shop">
-              <motion.span
-                whileHover={{ scale: 1.05 }}
-                className="text-black"
-              >
-                🛍️ Shop
-              </motion.span>
-            </Link>
-            <Link href="/about-us">
-              <motion.span
-                whileHover={{ scale: 1.05 }}
-                className="text-black"
-              >
-                ℹ️ About Us
-              </motion.span>
-            </Link>
-          </motion.div>
-        </motion.div>
-
-        {/* فرم ثبت‌نام */}
-        <motion.div
-          className="bg-black p-6 rounded-2xl shadow-2xl w-full max-w-sm"
-          variants={itemVariants}
+    <section className="bg-white text-black flex items-center justify-center px-8 py-16 h-screen">
+      <div className="text-center max-w-5xl">
+        <motion.h1
+          className="bg-gradient-to-r from-black via-white to-black bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl pb-2"
+          initial={{ backgroundPosition: '0% 50%' }}
+          animate={{ backgroundPosition: '100% 50%' }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            repeatType: 'reverse',
+            ease: 'easeInOut',
+          }}
+          style={{
+            backgroundSize: '300% auto',
+          }}
         >
-          <h2 className="text-2xl font-semibold text-center mb-4">Join Us</h2>
-          <form className="flex flex-col gap-4">
-            <motion.input
-              type="text"
-              placeholder="Your Name"
-              className="bg-white text-black p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-700"
-              whileFocus={{ scale: 1.02 }}
-              variants={itemVariants}
-            />
-            <motion.input
-              type="text"
-              placeholder="Your Last Name"
-              className="bg-white text-black p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-700"
-              whileFocus={{ scale: 1.02 }}
-              variants={itemVariants}
-            />
-            <motion.button
-              type="submit"
-              className="bg-black hover:bg-white hover:text-black text-white font-semibold py-2 rounded-md transition-all"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.95 }}
-              variants={itemVariants}
-            >
-              Submit
-            </motion.button>
-          </form>
-        </motion.div>
-      </motion.div>
+          Modern Solutions.Timeless Design.
+        </motion.h1>
+        <p className="mx-auto mt-4 max-w-2xl sm:text-xl/relaxed">
+          We build fast, responsive, and beautiful web experiences that help your business grow and stand out in the digital world.
+        </p>
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <Link href="/about" className="block w-full rounded-md border border-black bg-black px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-opacity-75 sm:w-auto">Get Started</Link>
+          <Link href="/about" className="block w-full rounded-md border border-black px-12 py-3 text-sm font-medium text-black hover:bg-black hover:text-white focus:outline-none focus:ring active:bg-blue-500 sm:w-auto">Learn More</Link>
+        </div>
+      </div>
     </section>
   );
-}
+};
+
+export default Hero;
