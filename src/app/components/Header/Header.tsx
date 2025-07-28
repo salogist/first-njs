@@ -4,7 +4,7 @@ import Link from "next/link";
 function NaviHead(){
     return(
         <header className="flex flex-row items-center justify-between gap-9 p-8 bg-white">
-        <h1 className="text-2xl font-bold text-black">OVO</h1>
+        <p className="text-2xl font-bold text-black">OVO</p>
         <nav className="flex flex-row items-center justify-center gap-4">
           <ul className="flex flex-row items-center justify-center gap-10">
             <li><Link href="/" className="text-black">Home</Link></li>
