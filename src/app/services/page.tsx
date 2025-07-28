@@ -3,13 +3,15 @@ import WebDevelopment from "../components/sections/WebDevelopment";
 import UiUxDesign from "../components/sections/UiUxDesign";
 import ServiceSection from "../components/sections/ServiceSection";
 
-export default function Home() {
-  return(
-    <>
-    <ServiceSection /> 
-    <WebDevelopment /> 
-    <UiUxDesign /> 
-    <SeoOptimizationCreative />   
-    </>
-  );
-}
+// حالت اول - مستقیم اکسپورت در تعریف
+export default function Serv() {
+    return(
+      <>
+        <ServiceSection /> 
+        <WebDevelopment /> 
+        <UiUxDesign /> 
+        <SeoOptimizationCreative />   
+      </>
+    );
+  }
+  
