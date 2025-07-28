@@ -35,9 +35,9 @@ model Post {
 }
 
 model FormRequest {
-  id          Int      @id @default(autoincrement())
-  name        String
-  email       String
-  message     String
-  submittedAt DateTime @default(now())
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  message   String
+  createdAt DateTime @default(now())
 }
