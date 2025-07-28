@@ -1,7 +1,7 @@
-import React from 'react'
+import AboutusSection from "../components/sections/AboutusSection";
 
-export default function AboutUs() {
-  return (
-    <div>AboutUs</div>
-  )
+export default function About() {
+  return(
+    <AboutusSection /> 
+  );
 }
