@@ -23,7 +23,7 @@ const WebDevelopmentCreative = () => {
     <section className="bg-white text-black min-h-screen px-8 py-16 h-screen flex items-center justify-center">
       <div className="mx-auto max-w-screen-xl px-4 py-8 lg:grid lg:grid-cols-2 lg:gap-16 items-center">
         {/* بخش محتوا */}
-        <div className="text-left">
+        <div>
           <motion.h2
             className="text-4xl font-extrabold sm:text-6xl bg-gradient-to-r from-black via-white to-black bg-clip-text text-transparent"
             initial={{ backgroundPosition: '0% 50%' }}
@@ -31,16 +31,16 @@ const WebDevelopmentCreative = () => {
             transition={{ duration: 6, repeat: Infinity, repeatType: 'reverse' }}
             style={{ backgroundSize: '300% auto' }}
           >
-            Web Development
+            تــوســـــعـــه وب
           </motion.h2>
           <p className="mt-4 text-black max-w-lg">
-            We architect and build robust digital experiences. Our code is clean, our performance is unmatched, and our products are built to last and scale.
+          ما تجربیات دیجیتالی قوی را معماری و ایجاد می‌کنیم. کد ما تمیز، عملکرد ما بی‌نظیر و محصولات ما برای دوام و مقیاس‌پذیری ساخته شده‌اند.
           </p>
-          <Link href="/about" className="inline-block rounded-md border border-black px-12 py-3 text-sm font-medium text-black hover:bg-black hover:text-white focus:outline-none focus:ring active:bg-blue-500 sm:w-auto mt-4">Start a Project</Link>
+          <Link href="/about" className="inline-block rounded-md border border-black px-12 py-3 text-sm font-medium text-black hover:bg-black hover:text-white focus:outline-none focus:ring active:bg-blue-500 sm:w-auto mt-4">شروع پروژه</Link>
         </div>
         {/* بخش انیمیشن کد */}
         <motion.div
-          className="mt-12 lg:mt-0 font-mono bg-black text-white p-6 rounded-lg shadow-2xl"
+          className="mt-12 lg:mt-0 font-mono bg-black text-white p-6 rounded-lg shadow-2xl text-left"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

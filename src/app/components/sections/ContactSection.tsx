@@ -5,16 +5,16 @@ import { useState } from "react";
 
 const cards = [
   {
-    title: "Fast Support",
-    desc: "Our team is always ready to answer your questions quickly.",
+    title: "پشتیبانی سریع",
+    desc: "تیم ما کاملا آماده پاسخگویی به سوالات و ابهامات شما هستند",
   },
   {
-    title: "Direct Communication",
-    desc: "Contact us via email and social media directly.",
+    title: "۲۴/۷ بودیم و هستیم",
+    desc: "در هر موقعیت از شبانه روز میتوانید با ما در تماس باشید",
   },
   {
-    title: "Free Consultation",
-    desc: "Get a free consultation before making any decisions.",
+    title: "مشاوره رایگان",
+    desc: "با استفاده از تماس و یا فرم روبرو میتونید درخواستتون رو ثبت کنید",
   },
 ];
 
@@ -72,8 +72,8 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ type: "spring", stiffness: 70, damping: 14 }}
         >
-          <h2 className="text-3xl font-bold text-black mb-2">Contact Us</h2>
-          <p className="text-black mb-4 max-w-md">For support, consultation, or any questions, simply fill out the form or use one of the methods below to reach us.</p>
+          <h2 className="text-3xl font-bold text-black mb-2">ارتباط با دیکاردو</h2>
+          <p className="text-black mb-4 max-w-md">برای پشتیبانی، مشاوره یا هرگونه سوال، کافیست فرم را پر کنید یا از یکی از روش‌های زیر برای ارتباط با ما استفاده کنید.</p>
           <div className="flex flex-col gap-4">
             {cards.map((card, idx) => (
               <motion.div

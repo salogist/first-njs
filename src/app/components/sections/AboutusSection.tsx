@@ -11,15 +11,12 @@ const About = () => {
             <div className="absolute inset-0 h-full w-full bg-black"></div>
           </div>
             <div className="lg:py-24">
-            <h2 className="text-3xl font-bold sm:text-4xl">Who We Are</h2>
-            <p className="mt-4 text-gray-600">
-              We are a team of passionate developers and designers dedicated to
-              creating high-quality digital products. Our philosophy is simple:
-              combine clean code with elegant design to deliver an exceptional
-              user experience. From small businesses to large enterprises, we tailor our approach
-              to meet your unique needs and challenges.
+            <h2 className="text-3xl font-bold sm:text-4xl pb-3">دانستنی در مورد هویت دیکاردو</h2>
+            <p className="mt-4 text-black">
+            ما تیمی از توسعه‌دهندگان و طراحان پرشور هستیم که خود را وقف ایجاد محصولات دیجیتال با کیفیت بالا کرده‌ایم. فلسفه ما ساده است:
+ترکیب کد تمیز با طراحی زیبا برای ارائه یک تجربه کاربری استثنایی. از کسب‌وکارهای کوچک گرفته تا شرکت‌های بزرگ، ما رویکرد خود را متناسب با نیازها و چالش‌های منحصر به فرد شما تنظیم می‌کنیم.
             </p>
-            <Link href="/about-us" className="mt-8 inline-block rounded-md bg-black px-12 py-3 text-sm font-medium text-white transition">Know More</Link>
+            <Link href="/about-us" className="mt-8 inline-block rounded-md bg-black px-12 py-3 text-sm font-medium text-white transition">بیشتر فهمیدن</Link>
           </div>
         </div>
       </div>

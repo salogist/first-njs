@@ -23,10 +23,10 @@ const UiUxDesignCreative = () => {
           transition={{ duration: 6, repeat: Infinity, repeatType: 'reverse' }}
           style={{ backgroundSize: '300% auto' }}
         >
-          UI/UX Design
+          دنیای جذاب رابط کاربری و تجربه کاربری
         </motion.h2>
         <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
-          We craft human-centered designs that are both beautiful and intuitive. We believe that great design is not just what it looks like, but how it works and feels.
+        ما طرح‌های انسان‌محوری خلق می‌کنیم که هم زیبا و هم شهودی هستند. ما معتقدیم که طراحی عالی فقط به ظاهر آن بستگی ندارد، بلکه به نحوه عملکرد و احساس آن نیز بستگی دارد.
         </p>
       </div>
       {/* بخش وایرفریم */}

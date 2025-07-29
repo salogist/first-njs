@@ -11,16 +11,16 @@ const PlaceholderIcon = () => (
 const Services = () => {
   const services = [
     {
-      title: 'Web Development',
-      description: 'Building robust and scalable web applications using modern frameworks like Next.js.',
+      title: 'طراحی سایت',
+      description: 'ساخت و توسعه هر نوع وبسایتی با استفاده از تکنولوژی های مدرن',
     },
     {
-      title: 'UI/UX Design',
-      description: 'Creating intuitive and beautiful user interfaces that are a joy to use.',
+      title: 'خلق هویت بصری و تجربه کاربری',
+      description: 'بررسی پرسونا کاربران و طراحی انواع رابط کاربری و خلق یک تجربه کاربری خوب',
     },
     {
-      title: 'SEO Optimization',
-      description: 'Improving your site\'s visibility on search engines to attract more organic traffic.',
+      title: 'دیجیتال مارکتینگ',
+      description: 'ایجاد و بهینه سازی محتوا برای برند شما و همچنین ایجاد کمپین های متنوع برای رشد فروش شما',
     },
   ];
 
@@ -28,13 +28,13 @@ const Services = () => {
     <section className="bg-black text-white px-8 py-16 h-screen flex items-center justify-center">
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-lg text-center">
-          <h2 className="text-3xl font-bold sm:text-4xl">What We Offer</h2>
+          <h2 className="text-3xl font-bold sm:text-4xl">چه کارهایی دقیقا انجام میدیم؟</h2>
           <p className="mt-4 text-white">
-            Our services are designed to provide a complete solution for your digital presence.
+            همونطور که گفتم کار اصلی ما ایجاد و خلق برند شما توی دنیای دیجیتال و گسترش اون هستش
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <div
               key={index}

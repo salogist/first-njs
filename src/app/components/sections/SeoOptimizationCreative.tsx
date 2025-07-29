@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 
 const SeoOptimizationCreative = () => {
   const chartData = [
-    { label: 'Q1', value: 30 },
-    { label: 'Q2', value: 50 },
-    { label: 'Q3', value: 85 },
-    { label: 'Q4', value: 70 },
+    { label: 'فروردین', value: 30 },
+    { label: 'اردیبهشت', value: 50 },
+    { label: 'خرداد', value: 65 },
+    { label: 'تیر', value: 90 },
   ];
 
   const chartVariants = {
@@ -33,17 +33,16 @@ const SeoOptimizationCreative = () => {
         {/* بخش محتوا */}
         <div>
           <motion.h2
-            className="text-4xl font-extrabold sm:text-6xl bg-gradient-to-r from-black via-white to-black bg-clip-text text-transparent z-50"
+            className="text-4xl font-extrabold sm:text-6xl bg-gradient-to-r from-black via-white to-black bg-clip-text text-transparent py-3"
             initial={{ backgroundPosition: '0% 50%' }}
             animate={{ backgroundPosition: '100% 50%' }}
             transition={{ duration: 6, repeat: Infinity, repeatType: 'reverse' }}
             style={{ backgroundSize: '300% auto' }}
           >
-            SEO Optimization
+            دیجیتال مارکتینگ
           </motion.h2>
           <p className="mt-4 text-black max-w-lg">
-            We turn your website into a powerful magnet for search engines. Through data-driven strategies, we elevate your rank, increase organic traffic, and deliver measurable results.
-          </p>
+          ما وب‌سایت شما را به یک آهنربای قدرتمند برای موتورهای جستجو تبدیل می‌کنیم. از طریق استراتژی‌های مبتنی بر داده، رتبه شما را بالا می‌بریم، ترافیک ارگانیک را افزایش می‌دهیم و نتایج قابل اندازه‌گیری ارائه می‌دهیم.          </p>
         </div>
         {/* بخش نمودار */}
         <motion.div
