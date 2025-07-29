@@ -10,6 +10,7 @@ function NaviHead(){
             <li><Link href="/" className="text-black">Home</Link></li>
             <li><Link href="/about-us" className="text-black">About Us</Link></li>
             <li><Link href="/contact-us" className="text-black">Contact Us</Link></li>
+            <li><Link href="/posts" className="text-black">Blog</Link></li>
             <li><Link href="/services" className="text-black">services</Link></li>
           </ul>
         </nav>
