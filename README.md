@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+پروژه وبلاگ و مدیریت محتوا با Next.js و Prisma
+==============================================
 
-## Getting Started
+این یک پروژه کامل وب است که با استفاده از جدیدترین تکنولوژی‌های وب ساخته شده است. هدف اصلی این پروژه، ایجاد یک پلتفرم برای نمایش مقالات و مدیریت محتوا از طریق یک پنل ادمین اختصاصی است.
 
-First, run the development server:
+✨ ویژگی‌های اصلی
+----------------
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+*   **ساختار مدرن با Next.js App Router:** استفاده از آخرین قابلیت‌های Next.js برای رندرینگ سمت سرور (SSR) و کامپوننت‌های سرور (Server Components) جهت بهبود عملکرد و سئو.
+*   **مدیریت دیتابیس با Prisma:** یک ORM مدرن برای تعامل ساده و امن با دیتابیس SQLite.
+*   **API Routes قدرتمند:** ساخت APIهای RESTful برای مدیریت کامل مقالات، دسته‌بندی‌ها و فرم‌های تماس.
+*   **پنل مدیریت اختصاصی:**
+    *   مشاهده پیام‌های دریافتی از فرم تماس.
+    *   مدیریت کامل مقالات (ایجاد، مشاهده، ویرایش و حذف).
+    *   قابلیت ایجاد دسته‌بندی برای مقالات.
+*   **طراحی واکنش‌گرا (Responsive):** استفاده از Tailwind CSS برای ایجاد یک رابط کاربری زیبا که در تمام دستگاه‌ها (موبایل، تبلت و دسکتاپ) به درستی نمایش داده می‌شود.
+*   **فونت فارسی استاندارد:** استفاده از فونت `Vazirmatn` برای خوانایی بهتر متون فارسی.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* * *
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🚀 راه‌اندازی و نصب
+-------------------
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+برای اجرای این پروژه به صورت محلی، مراحل زیر را دنبال کنید:
 
-## Learn More
+### ۱. پیش‌نیازها
 
-To learn more about Next.js, take a look at the following resources:
+*   [Node.js](https://nodejs.org/) (نسخه 18 یا بالاتر)
+*   npm یا yarn
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ۲. کلون کردن ریپازیتوری
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+پروژه را از گیت‌هاب کلون کنید:
 
-## Deploy on Vercel
+    git clone https://github.com/salogist/first-njs.git
+    cd first-njs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ۳. نصب پکیج‌ها
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+پکیج‌های مورد نیاز پروژه را نصب کنید:
+
+    npm install
+
+### ۴. راه‌اندازی دیتابیس
+
+این پروژه از SQLite به عنوان دیتابیس استفاده می‌کند.
+
+الف) یک فایل `.env` در ریشه پروژه بسازید و متغیر زیر را در آن قرار دهید:
+
+    DATABASE_URL="file:./prisma/dev.db"
+
+ب) مایگریشن‌ها را برای ساخت جداول دیتابیس اجرا کنید:
+
+    npx prisma migrate dev
+
+این دستور جداول `User`، `Post`، `Category` و `FormRequest` را در دیتابیس شما ایجاد می‌کند.
+
+### ۵. اجرای پروژه
+
+حالا می‌توانید سرور توسعه را راه‌اندازی کنید:
+
+    npm run dev
+
+سایت شما در آدرس `http://localhost:3000` در دسترس خواهد بود.
+
+* * *
+
+📜 اسکریپت‌های مفید
+-------------------
+
+*   **`npm run dev`**: اجرای سرور توسعه.
+*   **`npm run build`**: ساخت نسخه بهینه شده برای پروداکشن.
+*   **`npm run start`**: اجرای نسخه پروداکشن.
+*   **`npx prisma studio`**: باز کردن رابط کاربری گرافیکی برای مشاهده و ویرایش مستقیم دیتابیس.
+*   **`npx prisma migrate dev`**: اعمال تغییرات جدید در `schema.prisma` به دیتابیس.
+
+* * *
+
+🛠️ تکنولوژی‌های استفاده شده
+----------------------------
+
+*   **فریمورک:** [Next.js](https://nextjs.org/) 14+ (App Router)
+*   **زبان:** [TypeScript](https://www.typescriptlang.org/)
+*   **ORM دیتابیس:** [Prisma](https://www.prisma.io/)
+*   **دیتابیس:** [SQLite](https://www.sqlite.org/index.html)
+*   **استایل‌دهی:** [Tailwind CSS](https://tailwindcss.com/)
+*   **انیمیشن:** [Framer Motion](https://www.framer.com/motion/)
+*   **اعتبارسنجی:** [Zod](https://zod.dev/)
+*   **آیکون‌ها:** [Heroicons](https://heroicons.com/)
