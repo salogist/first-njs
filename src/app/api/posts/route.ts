@@ -11,7 +11,8 @@ const createPostSchema = z.object({
   authorId: z.number().int(),
   published: z.boolean().optional().default(false),
   excerpt: z.string().optional(),
-  imageUrl: z.string().url().optional().or(z.literal('')), // Allow URL or empty string
+  // *** CHANGE IS HERE: We remove .url() to allow relative paths ***
+  imageUrl: z.string().optional().nullable(),
   categoryId: z.number().int().nullable().optional(),
 });
 

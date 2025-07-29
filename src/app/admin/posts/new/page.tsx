@@ -68,8 +68,8 @@ export default function NewPostPage() {
         throw new Error(errorData.error || 'Something went wrong');
       }
 
-      // Redirect to the posts list page after successful creation
-      router.push('/admin/messages'); // یا هر آدرس دیگری برای لیست مقالات
+      // *** FIX: Redirect to the correct page after successful creation ***
+      router.push('/admin/posts'); // هدایت به صفحه لیست مقالات
       router.refresh(); // برای رفرش شدن داده‌ها در صفحه بعد
 
     } catch (err) {
@@ -118,12 +118,12 @@ export default function NewPostPage() {
           <div>
             <label htmlFor="imageUrl" className="block text-sm font-medium text-gray-700">آدرس تصویر اصلی</label>
             <input
-              type="url"
+              type="text"
               id="imageUrl"
               value={imageUrl}
               onChange={(e) => setImageUrl(e.target.value)}
               className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              placeholder="https://example.com/image.jpg"
+              placeholder="/images/your-image.jpg"
             />
           </div>
 
@@ -146,7 +146,7 @@ export default function NewPostPage() {
               id="content"
               rows={10}
               value={content}
-              onChange={(e) => setContent(e.targe.value)}
+              onChange={(e) => setContent(e.target.value)}
               className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               required
             />
@@ -197,4 +197,3 @@ export default function NewPostPage() {
     </div>
   );
 }
-
